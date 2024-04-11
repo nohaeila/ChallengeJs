@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-func AccueilHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "C:/Users/lnoha/OneDrive/Bureau/Web/ChallengeJs/Web/templates/accueil.html")
-}
-
 func main() {
 	http.HandleFunc("/", handlers.AccueilHandler)
 	http.HandleFunc("/accueil", handlers.AccueilHandler)
