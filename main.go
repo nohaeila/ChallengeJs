@@ -1,15 +1,15 @@
 package main
 
 import (
-	"ChallengeJs/handlers"
+	"ChallengeJs/Handlers"
 	"fmt"
 	"net/http"
 )
 
 func main() {
-	http.HandleFunc("/", handlers.AccueilHandler)
-	http.HandleFunc("/accueil", handlers.AccueilHandler)
-	http.HandleFunc("/snake", handlers.SnakeHandler)
+	http.HandleFunc("/", Handlers.AccueilHandler)
+	http.HandleFunc("/accueil", Handlers.AccueilHandler)
+	http.HandleFunc("/snake", Handlers.SnakeHandler)
 	//http.HandleFunc("/morpion", handlers.MorpionHandler)
 
 	//css
