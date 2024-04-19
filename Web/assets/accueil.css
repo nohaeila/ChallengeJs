@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 200px; /* Largeur fixe */
+    height: 200px; /* Hauteur fixe */
+    margin-right: 20px;
+  }
+  
+  
+  .card img {
+    width: 200%;
+    height: auto;
+  }
