@@ -12,6 +12,11 @@ func SnakeHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "templates/snake.html")
 }
 
+// TicTacToeHandler gère les pages de jeux
+func TicTacToeHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "templates/ticTacToe.html")
+}
+
 /*func MorpionHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "templates/morpion.html")
 }*/
