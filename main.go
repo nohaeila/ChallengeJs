@@ -7,18 +7,15 @@ import (
 )
 
 func main() {
+	// Gère le chemin pour les fichiers CSS
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("./Web/assets/"))))
+
+	// Gère le chemin pour les fichiers JavaScript
+	http.Handle("/scripts/", http.StripPrefix("/scripts/", http.FileServer(http.Dir("./Web/scripts/"))))
+
 	http.HandleFunc("/", Handlers.AccueilHandler)
 	http.HandleFunc("/accueil", Handlers.AccueilHandler)
 	http.HandleFunc("/snake", Handlers.SnakeHandler)
-	//http.HandleFunc("/morpion", handlers.MorpionHandler)
-
-	//css
-	fs := http.FileServer(http.Dir("assets"))
-	http.Handle("/assets/", http.StripPrefix("/assets/", fs))
-
-	//js
-	js := http.FileServer(http.Dir("scripts"))
-	http.Handle("/scripts/", http.StripPrefix("/scripts/", js))
 
 	// Démarrage du serveur
 	fmt.Println("Serveur démarré sur le port 8080, http://localhost:8080/")
