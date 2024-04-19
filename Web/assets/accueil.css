@@ -1,45 +1,35 @@
 body {
-    background-color: LightSteelBlue;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
     text-align: center;
-
-}
-
-#LogIn{
-
-    background-color: #4CAF50; /* Couleur de fond */
-    border: none; /* Supprimer la bordure */
-    color: white; /* Couleur du texte */
-    padding: 15px 32px; /* Rembourrage intérieur (haut/bas gauche/droite) */
-    text-align: center; /* Centrer le texte horizontalement */
-    text-decoration: none; /* Supprimer le soulignement par défaut */
-    display: inline-block; /* Afficher comme un bloc en ligne */
-    font-size: 16px; /* Taille de la police */
-    margin: 4px 2px; /* Marge extérieure (haut/bas gauche/droite) */
-    cursor: pointer; /* Curseur de la souris */
-    border-radius: 8px; /* Rayon de bordure */
-
-}
-
-#LogIn:hover {
-    background-color: #45a049; /* Changement de couleur de fond au survol */
-}
-
-#SignUp {
-
-    background-color: aqua;
-    border: none;
-    color: white;
-    padding : 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
-
-}
-
-#SignUp:hover {
-    background-color: aqua;
-}
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 200px; /* Largeur fixe */
+    height: 200px; /* Hauteur fixe */
+    margin-right: 20px;
+  }
+  
+  
+  .card img {
+    width: 200%;
+    height: auto;
+  }
