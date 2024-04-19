@@ -1,0 +1,88 @@
+body {
+
+    background-color: LightSteelBlue;
+    text-align: center;
+
+}
+
+#LogIn{
+
+    background-color: #4CAF50; /* Couleur de fond */
+    border: none; /* Supprimer la bordure */
+    color: white; /* Couleur du texte */
+    padding: 15px 32px; /* Rembourrage intérieur (haut/bas gauche/droite) */
+    text-align: center; /* Centrer le texte horizontalement */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+    display: inline-block; /* Afficher comme un bloc en ligne */
+    font-size: 16px; /* Taille de la police */
+    margin: 4px 2px; /* Marge extérieure (haut/bas gauche/droite) */
+    cursor: pointer; /* Curseur de la souris */
+    border-radius: 8px; /* Rayon de bordure */
+
+}
+
+#LogIn:hover {
+    background-color: #45a049; /* Changement de couleur de fond au survol */
+}
+
+#SignUp {
+
+    background-color: aqua;
+    border: none;
+    color: white;
+    padding : 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+
+#SignUp:hover {
+    background-color: aqua;
+}
+
+.login-box {
+    width: 300px; /* Définit la largeur de la boîte de connexion */
+    position: absolute; /* Positionne la boîte de connexion de manière absolue */
+    top: 50%; /* Positionne la boîte de connexion à 50% de la hauteur de la page */
+    left: 50%; /* Positionne la boîte de connexion à 50% de la largeur de la page */
+    transform: translate(-50%, -50%); /* Centre la boîte de connexion horizontalement et verticalement */
+    background: white; /* Définit la couleur de fond de la boîte de connexion */
+    padding: 40px; /* Ajoute un espace de remplissage intérieur à la boîte de connexion */
+    text-align: center; /* Centre le texte à l'intérieur de la boîte de connexion */
+    border-radius: 8px; /* Arrondit les coins de la boîte de connexion */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1); /* Ajoute une ombre à la boîte de connexion */
+}
+
+
+.user-box {
+    position: relative; /* Positionne les éléments enfants de manière relative à cet élément */
+    margin-bottom: 0px; /* Définit une marge inférieure de 0px pour les éléments enfants */
+}
+
+.user-box label {
+    position: absolute; /* Positionne l'étiquette de manière absolue par rapport à son conteneur */
+    top: 0; /* Positionne l'étiquette en haut de son conteneur */
+    left: 0; /* Positionne l'étiquette à gauche de son conteneur */
+    padding: 10px; /* Ajoute un espace de remplissage à l'étiquette */
+    font-size: 16px; /* Définit la taille de la police de l'étiquette */
+    color: #333; /* Définit la couleur du texte de l'étiquette */
+    transition: 0.5s; /* Ajoute une transition de 0.5 seconde pour les changements de style */
+    pointer-events: none; /* Désactive les événements de pointeur pour l'étiquette */
+}
+
+
+.user-box input {
+    width: 100%; /* Définit la largeur du champ de saisie à 100% de son conteneur */
+    padding: 10px; /* Ajoute un espace de remplissage au champ de saisie */
+    background: none; /* Supprime le fond du champ de saisie */
+    border: none; /* Supprime la bordure du champ de saisie */
+    outline: none; /* Supprime le contour du champ de saisie */
+    color: #333; /* Définit la couleur du texte du champ de saisie */
+    font-size: 16px; /* Définit la taille de la police du champ de saisie */
+    border-bottom: 1px solid #333; /* Ajoute une bordure inférieure au champ de saisie */
+}

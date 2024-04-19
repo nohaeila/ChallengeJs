@@ -8,7 +8,10 @@ import (
 
 func main() {
 	// Gère le chemin pour les fichiers CSS
-	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("./Web/assets/"))))
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("./assets/css/"))))
+
+	// Gère le chemin pour les fichiers images
+	http.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("./assets/img/"))))
 
 	// Gère le chemin pour les fichiers JavaScript
 	http.Handle("/scripts/", http.StripPrefix("/scripts/", http.FileServer(http.Dir("./Web/scripts/"))))
