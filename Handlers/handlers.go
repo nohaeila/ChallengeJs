@@ -2,17 +2,22 @@ package Handlers
 
 import "net/http"
 
-// AccueilHandler gère la page d'accueil
-func AccueilHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "templates/accueil.html")
+// ChoixJeuxHandler gère la page choixJeux
+func ChoixJeuxHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "templates/choixJeux.html")
 }
 
-// SnakeHandler gère les pages de jeux
+// SnakeHandler gère la page de jeux
 func SnakeHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "templates/snake.html")
 }
 
-// TicTacToeHandler gère les pages de jeux
+// TicTacToeHandler gère la page de jeux
 func TicTacToeHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "templates/ticTacToe.html")
+}
+
+// CalculateurVitesseHandler gère la page de jeux
+func CalculateurVitesseHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "templates/calculateurVitesse.html")
 }
