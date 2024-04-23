@@ -1,35 +1,81 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  .carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .card {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    width: 200px; /* Largeur fixe */
-    height: 200px; /* Hauteur fixe */
-    margin-right: 20px;
-  }
-  
-  
-  .card img {
-    width: 200%;
-    height: auto;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  color: #333; /* Couleur du titre */
+}
+
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  justify-content: flex-start; /* Aligner les cartes à gauche */
+  align-items: center;
+  height: 100%; /* Utiliser toute la hauteur disponible */
+}
+
+
+.card-wrapper {
+  margin: 0 10px; /* Espacement horizontal entre les cartes */
+}
+
+.card {
+  border-radius: 10px; /* Ajouter une bordure arrondie */
+  overflow: hidden; /* Masquer tout contenu débordant */
+  background-color: #333; /* Couleur de fond des cartes */
+  width: 300px; /* Largeur des cartes */
+  height: 350px; /* Hauteur des cartes */
+}
+
+
+.card img {
+  max-width: 100%; /* Redimensionne l'image pour qu'elle s'adapte à la largeur de la carte */
+  height: auto; /* Hauteur automatique pour conserver les proportions */
+}
+
+
+.game-title {
+  text-align: center;
+  margin-top: 10px; /* Espacement entre le titre et l'image */
+  color: #fff; /* Couleur du titre */
+}
+
+/* Styles pour les flèches de défilement */
+.scroll-button {
+  position: absolute;
+  top: 40%; /* Ajustez cette valeur pour positionner les flèches plus haut */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scroll-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+

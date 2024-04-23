@@ -20,6 +20,8 @@ func main() {
 	http.HandleFunc("/accueil", Handlers.AccueilHandler)
 	http.HandleFunc("/snake", Handlers.SnakeHandler)
 	http.HandleFunc("/ticTacToe", Handlers.TicTacToeHandler)
+	http.HandleFunc("/ticTacToe", Handlers.TicTacToeHandler)
+	http.HandleFunc("/ticTacToe", Handlers.TicTacToeHandler)
 
 	// Démarrage du serveur
 	fmt.Println("Serveur démarré sur le port 8080, http://localhost:8080/")

@@ -6,16 +6,48 @@
   <title>Accueil</title>
   <link rel="stylesheet" href="../assets/css/accueil.css">
 </head>
-<body> 
+<body>
   <div class="container">
-    <h1>Propositions de jeux</h1>
+    <h1 class="title">Propositions de jeux</h1>
     <div class="carousel">
-      <a href="snake.html" class="card-link"><div class="card"><img src="../assets/img/snake.png" alt="Snake"></div></a>
-      <a href="ticTacToe.html" class="card-link"><div class="card"><img src="../assets/img/ticTacToe.png" alt="TicTacToe"></div></a>
-      <a href="calculateur.html" class="card-link"><div class="card"><img src="../assets/img/calculateur.jpg" alt="Calculateur de Vitesse de frappe au clavier"></div></a>
-      <a href="visual_memory_test.html" class="card-link"><div class="card"><img src="../assets/img/visual_memory_test.jpg" alt="Visual Memory Test"></div></a>
-      <a href="tri_a_bulle_visuel.html" class="card-link"><div class="card"><img src="../assets/img/tri_a_bulle_visuel.jpg" alt="Tri à bulle visuel"></div></a>
-      <a href="hangman.html" class="card-link"><div class="card"><img src="../assets/img/hangman.jpg" alt="Hangman"></div></a>
+      <button class="scroll-button prev-button" onclick="scrollCarousel(-200)">&#10094;</button> <!-- Flèche gauche -->
+      <div class="card-wrapper">
+        <div class="card">
+          <h2 class="game-title">Snake</h2>
+          <a href="snake.html" class="card-link"><img src="../assets/img/snake.png" alt="Snake"></a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <h2 class="game-title">TicTacToe</h2>
+          <a href="ticTacToe.html" class="card-link"><img src="../assets/img/ticTacToe.png" alt="TicTacToe"></a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <h2 class="game-title">Calculateur de Vitesse</h2>
+          <a href="calculateurVitesse.html" class="card-link"><img src="../assets/img/calculateurVitesse.jpg" alt="Calculateur de Vitesse de frappe au clavier"></a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <h2 class="game-title">Visual Memory Test</h2>
+          <a href="visualMemoryTest.html" class="card-link"><img src="../assets/img/visualMemoryTest.jpg" alt="Visual Memory Test"></a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <h2 class="game-title">Tri à bulle visuel</h2>
+          <a href="triBulle.html" class="card-link"><img src="../assets/img/triBulle.jpg" alt="Tri à bulle visuel"></a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <h2 class="game-title">Hangman</h2>
+          <a href="hangman.html" class="card-link"><img src="../assets/img/hangman.jpg" alt="Hangman"></a>
+        </div>
+      </div>
+      <button class="scroll-button next-button" onclick="scrollCarousel(200)">&#10095;</button> <!-- Flèche droite -->
     </div>
   </div>
   <script src="../scripts/accueil.js"></script>
