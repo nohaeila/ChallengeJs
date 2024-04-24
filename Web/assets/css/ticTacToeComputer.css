@@ -1,0 +1,72 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.board {
+    display: inline-block;
+    border: 4px solid #333;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+.cell.occupied {
+    background-color: #ffd700; /* Couleur pour les cellules occupées */
+}
+
+.cell.x-winner,
+.cell.x-winner.occupied {
+    background-color: #9acd32; /* Couleur pour les cellules lorsque X gagne */
+}
+
+.cell.o-winner,
+.cell.o-winner.occupied {
+    background-color: #ff4500; /* Couleur pour les cellules lorsque O gagne */
+}
+
+.status {
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.restartButton {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.restartButton:hover {
+    background-color: #45a049;
+}
