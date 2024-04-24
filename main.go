@@ -16,12 +16,16 @@ func main() {
 	// Gère le chemin pour les fichiers JavaScript
 	http.Handle("/scripts/", http.StripPrefix("/scripts/", http.FileServer(http.Dir("./Web/scripts/"))))
 
-	http.HandleFunc("/", Handlers.AccueilHandler)
-	http.HandleFunc("/accueil", Handlers.AccueilHandler)
+	// Redirection de l'URL racine vers /choixJeux
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		http.Redirect(w, r, "/choixJeux.html", http.StatusSeeOther)
+	})
+
+	// Définition des gestionnaires pour les autres routes
+	http.HandleFunc("/choixJeux", Handlers.ChoixJeuxHandler)
 	http.HandleFunc("/snake", Handlers.SnakeHandler)
 	http.HandleFunc("/ticTacToe", Handlers.TicTacToeHandler)
-	http.HandleFunc("/ticTacToe", Handlers.TicTacToeHandler)
-	http.HandleFunc("/ticTacToe", Handlers.TicTacToeHandler)
+	http.HandleFunc("/typingSpeedTest", Handlers.TypingSpeedTestHandler)
 
 	// Démarrage du serveur
 	fmt.Println("Serveur démarré sur le port 8080, http://localhost:8080/")

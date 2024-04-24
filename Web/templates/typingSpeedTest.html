@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speed Typing Test</title>
+  <link rel="stylesheet" href="../assets/css/typingSpeedTest.css">
+</head>
+<body>
+  <main>
+    <div class="quote-display" id="quoteDisplay"><span></span></div>
+    <section class="typing">
+      <hr />
+      <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="score">
+        <div class="timer">
+          <span class="timer__label">Time:</span>
+          <span class="timer__text" id="timer">0</span>
+        </div>
+        <div class="words-per-minute">
+          <span class="words-per-minute__label">Words/min:</span>
+          <span class="words-per-minute__text" id="wpm">0</span>
+        </div>
+      </div>
+      <textarea class="quote-input" name="quoteInput" id="quoteInput" placeholder="Start typing right here!" cdkFocusInitial></textarea>
+    </section>
+  </main>
+  <footer>
+    <ul class="nav">
+      <li>
+        <a href="#" id="replayButton">
+          <span class="icon-cw"></span>
+          <span class="screen-reader-text">Refresh</span>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="../scripts/typingSpeedTest.js"></script>
+</body>
+</html>
