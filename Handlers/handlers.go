@@ -17,7 +17,7 @@ func TicTacToeHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "templates/ticTacToe.html")
 }
 
-// CalculateurVitesseHandler gère la page de jeux
-func CalculateurVitesseHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "templates/calculateurVitesse.html")
+// TypingSpeedTestHandler gère la page de jeux
+func TypingSpeedTestHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "templates/typingSpeedTest.html")
 }

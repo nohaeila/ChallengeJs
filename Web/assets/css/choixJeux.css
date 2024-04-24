@@ -3,8 +3,9 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; 
-}
+  background-color: rgba(76, 70, 70, 0.5);
 
+}
 
 .container {
   max-width: 100%;
@@ -14,17 +15,19 @@ body {
 
 .title {
   text-align: center;
-  color: #333; /* Couleur du titre */
+  color: #f7f0f0; /* Couleur du titre */
+  margin-bottom: 50px; /* Ajouter un grand espace entre le titre et les cartes */
+
 }
 
 .carousel {
   display: flex;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-x: hidden; /* Empêcher l'affichage de la barre de défilement horizontale */
+  overflow-y: auto; /* Activer la barre de défilement verticale si nécessaire */
   scroll-snap-type: x mandatory;
   justify-content: flex-start; /* Aligner les cartes à gauche */
   align-items: center;
-  height: 100%; /* Utiliser toute la hauteur disponible */
+  height: -100%;
 }
 
 
@@ -35,22 +38,24 @@ body {
 .card {
   border-radius: 10px; /* Ajouter une bordure arrondie */
   overflow: hidden; /* Masquer tout contenu débordant */
-  background-color: #333; /* Couleur de fond des cartes */
+  background-color: #f5efef; /* Couleur de fond des cartes */
   width: 300px; /* Largeur des cartes */
   height: 350px; /* Hauteur des cartes */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ajouter une ombre */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animation de transition */
+  transform-origin: center center; /* Définir l'origine de la transformation au centre */
 }
-
 
 .card img {
-  max-width: 100%; /* Redimensionne l'image pour qu'elle s'adapte à la largeur de la carte */
+  width: 100%; /* Utiliser 100% de la largeur disponible */
   height: auto; /* Hauteur automatique pour conserver les proportions */
+  object-fit: cover; /* Adapter l'image pour couvrir la totalité de la carte */
 }
-
 
 .game-title {
   text-align: center;
   margin-top: 10px; /* Espacement entre le titre et l'image */
-  color: #fff; /* Couleur du titre */
+  color: #323131; /* Couleur du titre */
 }
 
 /* Styles pour les flèches de défilement */
@@ -77,5 +82,19 @@ body {
 .next-button {
   right: 10px;
 }
+
+/* Partie pour l'effet de zoom */
+li {
+  transform-origin: top left;
+  transform: skewY(4.398705355deg) rotatez(14.03624deg);
+  padding-top: 150%;
+  z-index: 1;
+  transition-property: z-index;
+  transition-duration: .3s;
+}
+
+
+
+
 
 
