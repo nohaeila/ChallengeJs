@@ -16,10 +16,7 @@ func main() {
 	// Gère le chemin pour les fichiers JavaScript
 	http.Handle("/scripts/", http.StripPrefix("/scripts/", http.FileServer(http.Dir("./Web/scripts/"))))
 
-	// Redirection de l'URL racine vers /choixJeux
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "/choixJeux.html", http.StatusSeeOther)
-	})
+	http.HandleFunc("/", Handlers.ChoixJeuxHandler)
 
 	// Définition des gestionnaires pour les autres routes
 	http.HandleFunc("/choixJeux", Handlers.ChoixJeuxHandler)
