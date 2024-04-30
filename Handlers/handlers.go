@@ -4,7 +4,7 @@ import "net/http"
 
 // ChoixJeuxHandler gère la page choixJeux
 func ChoixJeuxHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "templates/choixJeux.html")
+	http.ServeFile(w, r, "Web/templates/choixJeux.html")
 }
 
 // SnakeHandler gère la page de jeux
